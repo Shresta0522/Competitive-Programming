@@ -9,7 +9,28 @@
 # assert(dicetoorderedhand(6,5,6) == 665)
 # assert(dicetoorderedhand(2,2,2) == 222)
 
+def helperfunc(x,y):
+	if(x>y):
+		a=x
+	else:
+		a=y
+	return str(a)
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	l=[a,b,c]
+	
+	
+
+	for i in range(len(l)):
+		for j in range(i,len(l)):
+			# print(l[i])
+			# print(l[j])
+			if(l[i]<l[j]):
+				l[i],l[j]=l[j],l[i]
+	# print(l)
+	s=''.join(map(str,l))
+	# print(s)
+	return int(s)
+
+# dicetoorderedhand(6,5,4)
