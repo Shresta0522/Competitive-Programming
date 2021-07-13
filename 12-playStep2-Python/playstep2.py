@@ -34,20 +34,14 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	
 	h=[]
 	d=[]
-
 	h1=[]
-
 	for i in str(hand):
 		h.append(int(i))
-
+		
 	for i in str(dice):
 		d.append(int(i))
-
-	# print(h)
-	# m=max(h)
 	
 	if (len(h)==( len(set(h)) ) ) :
 		m=max(h)
@@ -56,27 +50,18 @@ def playstep2(hand, dice):
 		d.pop()
 		h1.append(d[-1])
 		d.pop()
-		# print(h1)
-		# print(d)
 		h1.sort(reverse=True)
 		a1=''.join(map(str,h1))
 		a2=''.join(map(str,d))
 		return (int(a1),int(a2))
-
 	else:
-		
 		for i in h:
 			if(h.count(i)>1):
-				h1.append(i)		
+				h1.append(i)
 		h1.append(d[-1])
 		d.pop()
-		# print(h1)
-		# print(d)
 		h1.sort(reverse=True)
-		print(h1)
 		a1=''.join(map(str,h1))
 		a2=''.join(map(str,d))
 		return (int(a1),int(a2))
-	
 
-# print(playstep2(544, 456))
