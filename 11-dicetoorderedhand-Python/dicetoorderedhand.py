@@ -19,8 +19,6 @@ def helperfunc(x,y):
 def dicetoorderedhand(a, b, c):
 	# your code goes here
 	l=[a,b,c]
-	
-	
 
 	for i in range(len(l)):
 		for j in range(i,len(l)):
