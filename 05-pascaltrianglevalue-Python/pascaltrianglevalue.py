@@ -6,7 +6,20 @@
 # are not legal values, return None, instead of crashing. 
 
 
+import math
+
+def ncrfact(n,r):
+	nfact = math.factorial(n)
+	rfact = math.factorial(r)
+	return nfact/(rfact*(math.factorial(n-r)))
 
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if (row>=0) and (col>=0):
+		if col<=row:
+			r = ncrfact(row,col)
+			# print(r)
+			return int(r)
+		else:
+			return 0
+# print(fun_pascaltrianglevalue(4,2))
