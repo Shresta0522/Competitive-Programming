@@ -24,4 +24,4 @@ def fun_getinrange(x, bound1, bound2):
 		return hi
 	
 	
-print((fun_getinrange(6, 5, 3), 5))
+# print((fun_getinrange(6, 5, 3), 5))
