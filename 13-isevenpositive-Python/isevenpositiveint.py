@@ -6,4 +6,15 @@
 
 def isevenpositiveint(x):
 	# your code goes here
-	pass
+	# print(type(x))
+	x=str(x)
+	# print(x.isnumeric())
+	
+	if(x.isnumeric()==True):
+		if(int(x)%2==0):
+			return True
+		else:
+			return False
+	else:
+		return False
+print(isevenpositiveint(123456))
