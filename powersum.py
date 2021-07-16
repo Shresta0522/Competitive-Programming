@@ -25,15 +25,24 @@ def powerSum(n, k):
 
 
 def power(a,b):
-    s=1
-    for i in range(1,b+1):
-        # print(a*a)
-        s=s*(a)
-        # print(s)
-    return s
+    # s=1
+    
+    for i in range(1,(b//2)):
+        a=a*a
+    if(b%2==0): 
+        return a
+    else:
+        return a*a
+
+        
+        
+
+    
 
 # print(power(2,5))
-# Write your own test cases here...
+# print(power(2,8))
+# print(2**8)
+# # Write your own test cases here...
 @pytest.mark.parametrize('n,k,s',[
     (0,0,0),(-1,1,0),(1,-1,0),(2,2,5)
 ])
@@ -43,4 +52,4 @@ def test(n,k,s):
 
 print ("All test cases passed...")
 
-# print(powerSum(2,2)):
+# print(powerSum(2,))
