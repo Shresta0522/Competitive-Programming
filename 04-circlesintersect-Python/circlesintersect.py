@@ -6,4 +6,11 @@
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
+	d=((x1-x2)**2 +(y1-y2)**2)**(0.5)
+	print(d)
+	# print(r)
+	if(d<=(r1+r2)):
+		return True
 	return False 
+
+# print(fun_circlesintersect(5, 6, 14, 8, 7, 9))
