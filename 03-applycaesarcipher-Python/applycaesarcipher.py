@@ -1,3 +1,4 @@
+
 # A Caesar Cipher is a simple cipher that works by shifting each letter in 
 # the given message by a certain number. For example, if we shift the message 
 # "We Attack At Dawn" by 1 letter, it becomes "Xf Buubdl Bu Ebxo"
@@ -11,8 +12,19 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	r=""
+	for i in range(len(msg)):
+		char = msg[i]
+        
+		if (char.isupper()):
+			r += chr((ord(char) + shift-65) % 26 + 65)
+        
+		elif char == " ":
+			r +=" "
+        
+		else:
+			r += chr((ord(char) + shift - 97) % 26 + 97)
 
-
-
+	return r
+print(fun_applycaesarcipher("We Attack At Dawn",1))
 
