@@ -4,13 +4,13 @@ using the first two letters of the string."""
 
 class HashTable(object):
     def __init__(self):
-        self.table = [None]*10000
+        self.table = [0]*10000
 
     def store(self,string):
         """Input a string that's stored in 
         the table."""
         r=self.calculate_hash_value(string)
-
+        
         if(self.table[r]!=None):
             self.table[r]=(string)
         else:
@@ -29,9 +29,11 @@ class HashTable(object):
         # Your code goes here
         if(self.table==None):
             return -1
-            
+        if(string==None) :
+            return -1
         r=self.calculate_hash_value(string)
-        if(string in self.table[r]):
+        print("r",r)
+        if(string == self.table[r]):
             return r
         
         return -1
@@ -40,6 +42,8 @@ class HashTable(object):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
+        if(string==None):
+            return -1
         a=string[0]
         b=string[1]
         # print(a,b)
