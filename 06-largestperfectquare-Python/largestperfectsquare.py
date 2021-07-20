@@ -9,4 +9,20 @@
 
 def largestperfectsquare(n):
 	# your code goes here
-	pass
+	x=2
+	r=0
+	while(n>=r):
+		# print(x**2)
+		s=x**2
+		# print(s)
+		r=s
+		if(r==n):
+			return r
+		if(r>n):
+			x=x-1
+			return x**2
+		x+=1
+	
+	
+
+print(largestperfectsquare(26))
