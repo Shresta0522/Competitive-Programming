@@ -24,7 +24,6 @@ def ishappynumber(n):
 	elif(n==1 or n==6):
 		return True
 				
-	
 	while(n>=1):
 		# print("nnn",n)
 		if(n==1 or n==6):
