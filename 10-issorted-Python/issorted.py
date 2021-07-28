@@ -7,4 +7,11 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	if(a == sorted(a)):
+		return True
+	if (a == sorted(a, reverse = True)):
+			return True
+	else:
+		return False
+
+print(issorted([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
