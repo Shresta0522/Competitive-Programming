@@ -56,14 +56,6 @@ def recursion_binarysearchvalues(L, v):
 	# Your codes goes here
 
 
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'q') == [(2,'f'), (4, 'm'), (5, 'q')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'a')== [(2,'f'), (0,'a')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'c')== [(2,'f'), (0,'a'), (1,'c')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'f')== [(2,'f')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'g') == [(2,'f'), (4, 'm'), (3, 'g')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'm') ==  [(2,'f'), (4, 'm')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'z') == [(2,'f'), (4, 'm'), (5, 'q')]
-assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'b') == [(2,'f'), (0,'a'), (1,'c')]
 
 print("All testcases passed....")
 # print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'q'))
