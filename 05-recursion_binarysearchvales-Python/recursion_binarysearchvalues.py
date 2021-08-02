@@ -46,10 +46,14 @@ def binarysearch_value(L,low,high,v):
 		return r
 
 def recursion_binarysearchvalues(L, v):
+	global r
 	
+	# print("l",r)
+	r=list()
 	
-	r.clear()
+	# r.clear()
 	result=binarysearch_value(L,0,len(L)-1,v)
+	print("r",r)
 	# print(result)
 	return result
 
@@ -57,5 +61,7 @@ def recursion_binarysearchvalues(L, v):
 
 
 
-print("All testcases passed....")
-# print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'q'))
+
+# print("All testcases passed....")
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'q'))
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'a'))
