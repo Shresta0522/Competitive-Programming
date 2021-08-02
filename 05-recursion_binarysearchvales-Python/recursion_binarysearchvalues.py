@@ -16,8 +16,54 @@
 #     v = 'c'
 #     assert(binarySearchValues(L, v) == [(2,'f'), (0,'a'), (1,'c')])
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
+import pytest
+r=[]
+
+def binarysearch_value(L,low,high,v):
+	# r=[]
+	if(high>=low):
+		m=low+(high-low)//2
+		if (L[m]==v):
+			a=(m,L[m])
+			# print(a)
+			r.append(a)
+			# print("r",r)
+			return r
+		elif (L[m]>v):
+			a=(m,L[m])
+			# print(a)
+			r.append(a)
+			# print("r",r)
+			return binarysearch_value(L,low,m-1,v)
+		else:
+			a=(m,L[m])
+			# print(a)
+			r.append(a)
+			# print("r",r)
+			return binarysearch_value(L,m+1,high,v)
+	else:
+		# r=[]
+		return r
 
 def recursion_binarysearchvalues(L, v):
-	# Your codes goes here
-	pass
 	
+	
+	r.clear()
+	result=binarysearch_value(L,0,len(L)-1,v)
+	# print(result)
+	return result
+
+	# Your codes goes here
+
+
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'q') == [(2,'f'), (4, 'm'), (5, 'q')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'a')== [(2,'f'), (0,'a')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'c')== [(2,'f'), (0,'a'), (1,'c')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'f')== [(2,'f')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'g') == [(2,'f'), (4, 'm'), (3, 'g')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'm') ==  [(2,'f'), (4, 'm')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'z') == [(2,'f'), (4, 'm'), (5, 'q')]
+assert recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'b') == [(2,'f'), (0,'a'), (1,'c')]
+
+print("All testcases passed....")
+# print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'],'q'))
