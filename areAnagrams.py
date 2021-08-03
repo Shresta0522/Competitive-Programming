@@ -12,6 +12,21 @@
 
 def areAnagrams(s1, s2):
     # Your code goes here...
-    pass
+    s1=s1.lower()
+    s2=s2.lower()
+    if len(s1) != len(s2):
+        return False
+    else:
+        for i in s1:
+            if s1.count(i) != s2.count(i):
+                return False
+            return True
 
+
+assert areAnagrams("abcd","dcba")==True
+assert areAnagrams("asdf","fdas")==True
+assert areAnagrams("ccxz","xczc")==True
+assert areAnagrams("abce","dcbae")==False
+assert areAnagrams("qrtv","vrtw")==False
+print("All testcases Passed...")
 # write your test cases here...
