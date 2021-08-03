@@ -10,3 +10,7 @@
 
 def fun_nth_smithnumber(n):
     return 1
+
+
+def smithnumber(n):
+    
