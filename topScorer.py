@@ -16,12 +16,44 @@
 
 def topScorer(data):
     # Your code goes here...
-    return ""
+    if(data==""):
+        return None
+
+    d=data.split("\n")[0:-1]
+    # print(d)
+    
+    names=[]
+    scores=[]
+    for i in (d):
+        s=i.split(",")
+        # score=score+s[]
+        names.append(s[0])
+        s.remove(s[0])
+        p=0
+        for i in s:
+            # print(i)
+            p=p+int(i)
+        # print(p)
+        scores.append(p)
+        # p=p+int(s[i])
+        # print(p)
+    if(scores[0]==scores[1]):
+        return names[0]+","+names[1] 
+    elif(scores[0]==max(scores)):
+        return names[0]
+    else:
+        return names[1]
+    
+        
+    
+
+print()
 
 data = '''\
 Fred,10,20,30,40
 Wilma,10,20,30
 '''
+# print(topScorer(data))
 assert(topScorer(data) == 'Fred')
 
 data = '''\
@@ -34,6 +66,7 @@ data = '''\
 Fred,11,20,30
 Wilma,10,20,30,1
 '''
+# print(topScorer(data))
 assert(topScorer(data) == 'Fred,Wilma')
 
 assert(topScorer('') == None)
